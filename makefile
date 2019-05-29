@@ -7,19 +7,23 @@ all: SoccerCart
 debug: CXXFLAGS += -g
 debug: default
 
-SoccerCart: jersey.o cleat.o ball.o shinpad.o product.o *.h
-	${CXX} ${CXXFLAGS} -o jersey.o cleat.o ball.o shinpad.o product.o $(GTKFLAGS)
-# SoccerCart.o: SoccerCart.cpp *.h
-# 	${CXX} ${CXXFLAGS} -c SoccerCart.cpp $(GTKFLAGS)
-shinpad.o: shinpad.cpp *.h
-	${CXX} ${CXXFLAGS} -c shinpad.cpp $(GTKFLAGS)
-product.o: product.cpp *.h
-	${CXX} ${CXXFLAGS} -c product.cpp $(GTKFLAGS)
-ball.o: ball.cpp *.h
-	${CXX} ${CXXFLAGS} -c ball.cpp $(GTKFLAGS)
-cleat.o: cleat.cpp *.h
-	${CXX} ${CXXFLAGS} -c cleat.cpp $(GTKFLAGS)
+SoccerCart: main.o mainwin.o store.o jersey.o cleat.o ball.o shinpad.o product.o *.h
+	${CXX} ${CXXFLAGS} -o SoccerCart main.o mainwin.o store.o jersey.o cleat.o ball.o shinpad.o product.o $(GTKFLAGS)
+main.o: main.cpp *.h
+	${CXX} ${CXXFLAGS} -c main.cpp $(GTKFLAGS)
+mainwin.o: mainwin.cpp *.h
+	${CXX} ${CXXFLAGS} -c mainwin.cpp $(GTKFLAGS)
+store.o: store.cpp *.h
+	${CXX} ${CXXFLAGS} -c store.cpp $(GTKFLAGS)
 jersey.o: jersey.cpp *.h
 	${CXX} ${CXXFLAGS} -c jersey.cpp $(GTKFLAGS)
+cleat.o: cleat.cpp *.h
+	${CXX} ${CXXFLAGS} -c cleat.cpp $(GTKFLAGS)
+ball.o: ball.cpp *.h
+	${CXX} ${CXXFLAGS} -c ball.cpp $(GTKFLAGS)
+product.o: product.cpp *.h
+	${CXX} ${CXXFLAGS} -c product.cpp $(GTKFLAGS)
+shinpad.o: shinpad.cpp *.h
+	${CXX} ${CXXFLAGS} -c shinpad.cpp $(GTKFLAGS)
 clean:
-	rm -f *.gch *.o SoccerCart
+	rm -f *.gch *.o main
