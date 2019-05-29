@@ -13,7 +13,7 @@ protected:
     Size _size;
 public:
     Shinpad(string name, double price, double cost, Size size);
-    Size size() const;
+    Size getSize() const;
     virtual std::string to_string() override;
 };
 

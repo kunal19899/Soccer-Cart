@@ -36,6 +36,6 @@ string Ball::to_string()
         isInflated = "Not Inflated";
     }
 
-    cout << Product::name() << '|' << _price << '|' << _cost << '|' << ball_design << isInflated;
+    cout << Product::name() << '|' << _price << '|' << _cost << '|' << ball_design << isInflated << endl;
     return ball_design;
 }

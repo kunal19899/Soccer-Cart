@@ -22,6 +22,6 @@ string Shinpad::to_string()
             break;
     }
 
-    cout << Product::name() << '|' << _price << " | " << _cost << " | " << d_size;
+    cout << Product::name() << '|' << _price << " | " << _cost << " | " << d_size << endl;
     return d_size;
 }

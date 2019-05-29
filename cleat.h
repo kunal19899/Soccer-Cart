@@ -6,9 +6,9 @@
 #include <iostream>
 
 
-enum Color {red, blue, black, white, green, blue};
+enum Color {red, blue, black, white, green, yellow};
 enum Design {normal, special, custom};
-enum LaceType {cloth, plastic, nylon}
+enum LaceType {cloth, plastic, nylon};
 
 class Cleat : public Product{
 protected:
